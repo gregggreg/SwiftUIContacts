@@ -125,6 +125,15 @@ extension ContactView {
         ///
         /// If not this property is not set, than adding the contact to the user's contacts is disabled.
         public var contactStore: CNContactStore?
+
+        public init(alternativeName: String? = nil, message: String? = nil, displayedPropertyKeys: [ContactsConstant]? = nil, parentGroup: CNGroup? = nil, parentContainer: CNContainer? = nil, contactStore: CNContactStore? = nil) {
+            self.alternativeName = alternativeName
+            self.message = message
+            self.displayedPropertyKeys = displayedPropertyKeys
+            self.parentGroup = parentGroup
+            self.parentContainer = parentContainer
+            self.contactStore = contactStore
+        }
     }
 }
 
